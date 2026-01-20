@@ -5,93 +5,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Ahmed | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">OA</div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#labs" class="nav-link">Labs</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
     <header>
-        <h1>Omar Ahmed</h1>
-        <p>Cybersecurity / Pentest Student</p>
-        <a href="#projects" class="btn">View Projects</a>
+        <div class="header-content">
+            <div class="blob"></div>
+            <h1 class="title-animate">Omar Ahmed</h1>
+            <p class="subtitle">Cybersecurity & Penetration Testing Specialist</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <p>
-            I am a third-year Cybersecurity student with a strong focus on penetration testing,
-            network security, and hands-on practice. I have experience working on security labs,
-            academic projects, and real-world security scenarios.
-        </p>
+        <div class="about-content">
+            <p>
+                I am a third-year Cybersecurity student with a strong focus on penetration testing,
+                network security, and hands-on practice. I have experience working on security labs,
+                academic projects, and real-world security scenarios.
+            </p>
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>3+</h3>
+                    <p>Years Studying</p>
+                </div>
+                <div class="stat">
+                    <h3>10+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat">
+                    <h3>7+</h3>
+                    <p>Technical Skills</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Technical Skills</h2>
-        <ul>
-            <li>Penetration Testing Fundamentals</li>
-            <li>Network Security</li>
-            <li>Web Application Security (OWASP Top 10)</li>
-            <li>Linux Fundamentals</li>
-            <li>pfSense Firewall & VPN</li>
-            <li>Digital Forensics (Mobile)</li>
-            <li>IoT Security (ESP32)</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Quantum-Safe Adaptive VPN</h3>
-            <p>
-                Designed and implemented a secure VPN solution using pfSense,
-                integrating Post-Quantum Cryptography (PQC) to protect against
-                future quantum threats. Supported both Remote Access and Site-to-Site VPN.
-            </p>
-            <span>Tools: pfSense, VPN, Cryptography</span>
-        </div>
-
-        <div class="project">
-            <h3>Web Application Security (OWASP Juice Shop)</h3>
-            <p>
-                Performed hands-on web penetration testing and exploited common
-                vulnerabilities such as SQL Injection, XSS, and authentication flaws.
-            </p>
-            <span>Tools: OWASP Juice Shop, Burp Suite</span>
-        </div>
-
-        <div class="project">
-            <h3>IoT & Network Security Projects</h3>
-            <p>
-                Designed an IoT Smart University network using Cisco Packet Tracer
-                and built a WiFi IoT Gateway using ESP32 with secure communication concepts.
-            </p>
-            <span>Tools: Cisco Packet Tracer, ESP32</span>
+        <div class="skills-grid">
+            <div class="skill-tag" style="--delay: 0.1s">
+                <i class="fas fa-shield-alt"></i>
+                <span>Penetration Testing</span>
+            </div>
+            <div class="skill-tag" style="--delay: 0.2s">
+                <i class="fas fa-network-wired"></i>
+                <span>Network Security</span>
+            </div>
+            <div class="skill-tag" style="--delay: 0.3s">
+                <i class="fas fa-globe"></i>
+                <span>Web App Security</span>
+            </div>
+            <div class="skill-tag" style="--delay: 0.4s">
+                <i class="fab fa-linux"></i>
+                <span>Linux</span>
+            </div>
+            <div class="skill-tag" style="--delay: 0.5s">
+                <i class="fas fa-fire"></i>
+                <span>pfSense Firewall</span>
+            </div>
+            <div class="skill-tag" style="--delay: 0.6s">
+                <i class="fas fa-magnifying-glass"></i>
+                <span>Forensics</span>
+            </div>
+            <div class="skill-tag" style="--delay: 0.7s">
+                <i class="fas fa-microchip"></i>
+                <span>IoT Security</span>
+            </div>
         </div>
     </section>
 
-    <section id="labs">
-        <h2>Labs & Practice</h2>
-        <ul>
-            <li>Cisco Packet Tracer – Networking Labs</li>
-            <li>TryHackMe – In Progress</li>
-            <li>Hack The Box – Planned</li>
-        </ul>
+    <section id="projects" class="fade-in">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" style="--delay: 0.1s">
+                <div class="project-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Quantum-Safe Adaptive VPN</h3>
+                <p>
+                    Designed and implemented a secure VPN solution using pfSense,
+                    integrating Post-Quantum Cryptography (PQC) to protect against
+                    future quantum threats.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">pfSense</span>
+                    <span class="tag">VPN</span>
+                    <span class="tag">Cryptography</span>
+                </div>
+            </div>
+
+            <div class="project-card" style="--delay: 0.2s">
+                <div class="project-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <h3>Web Application Security</h3>
+                <p>
+                    Performed hands-on web penetration testing and exploited common
+                    vulnerabilities such as SQL Injection, XSS, and authentication flaws.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">OWASP</span>
+                    <span class="tag">Burp Suite</span>
+                    <span class="tag">Testing</span>
+                </div>
+            </div>
+
+            <div class="project-card" style="--delay: 0.3s">
+                <div class="project-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>IoT & Network Security</h3>
+                <p>
+                    Designed an IoT Smart University network using Cisco Packet Tracer
+                    and built a WiFi IoT Gateway using ESP32 with secure communication.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">IoT</span>
+                    <span class="tag">ESP32</span>
+                    <span class="tag">Networking</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email:oa148935@gmail.com</p>
-        <p>
-            <a href="https://www.linkedin.com/in/omar-ahmed-ba8168290/">LinkedIn</a> |
-            <a href="https://github.com/oa198">GitHub</a>
-        </p>
+    <section id="labs" class="fade-in">
+        <h2>Labs & Practice Platforms</h2>
+        <div class="labs-grid">
+            <div class="lab-card">
+                <h3>Cisco Packet Tracer</h3>
+                <p>Networking Labs</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="lab-card">
+                <h3>TryHackMe</h3>
+                <p>In Progress</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%"></div>
+                </div>
+            </div>
+            <div class="lab-card">
+                <h3>Hack The Box</h3>
+                <p>Planned</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Let's Connect</h2>
+        <div class="contact-content">
+            <p>I'm always open to new opportunities and collaborations in cybersecurity.</p>
+            <div class="contact-methods">
+                <a href="mailto:oa148935@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>oa148935@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/omar-ahmed-ba8168290/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/oa198" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2026 Omar Ahmed</p>
+        <p>© 2026 Omar Ahmed | Cybersecurity Student</p>
+        <p class="footer-accent">Building secure systems, one line of code at a time</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
