@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (hamburger) {
         hamburger.addEventListener('click', function () {
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function () {
-                navMenu.style.display = 'none';
+                navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
             });
         });
