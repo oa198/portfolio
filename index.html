@@ -102,21 +102,41 @@
     <section id="projects" class="fade-in">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
-            <div class="project-card" style="--delay: 0.1s">
+            <div class="project-card featured" style="--delay: 0.1s">
                 <div class="project-icon">
                     <i class="fas fa-lock"></i>
                 </div>
+                <span class="featured-badge">Featured Project</span>
                 <h3>Quantum-Safe Adaptive VPN</h3>
-                <p>
-                    Architected and implemented a robust VPN solution leveraging pfSense with integrated Post-Quantum
-                    Cryptography (PQC) protocols. The solution provides defense against future quantum computing threats
-                    while supporting both Remote Access and Site-to-Site VPN configurations.
-                </p>
+                <div class="project-desc collapsed">
+                    <p>
+                        Architected and implemented a robust VPN solution leveraging pfSense with integrated
+                        Post-Quantum
+                        Cryptography (PQC) protocols. The solution provides defense against future quantum computing
+                        threats
+                        while supporting both Remote Access and Site-to-Site VPN configurations.
+                    </p>
+                </div>
                 <div class="project-tags">
                     <span class="tag">pfSense</span>
                     <span class="tag">Cryptography</span>
                     <span class="tag">VPN</span>
                 </div>
+                <div class="project-meta">
+                    <div class="meta-group">
+                        <span class="meta-label">Tools:</span>
+                        <span class="meta-badge">pfSense</span>
+                        <span class="meta-badge">OpenSSL</span>
+                        <span class="meta-badge">WireGuard</span>
+                    </div>
+                    <div class="meta-group">
+                        <span class="meta-label">Focus:</span>
+                        <span class="meta-badge">VPN Security</span>
+                        <span class="meta-badge">Post-Quantum</span>
+                        <span class="meta-badge">Network Hardening</span>
+                    </div>
+                </div>
+                <button class="read-more">Details</button>
             </div>
 
             <div class="project-card" style="--delay: 0.2s">
@@ -124,17 +144,33 @@
                     <i class="fas fa-bug"></i>
                 </div>
                 <h3>Web Application Security Testing</h3>
-                <p>
-                    Conducted comprehensive penetration testing exercises on OWASP Juice Shop, identifying and
-                    exploiting critical vulnerabilities including SQL Injection, Cross-Site Scripting (XSS), and
-                    authentication bypass flaws. Demonstrated detailed vulnerability analysis and remediation
-                    strategies.
-                </p>
+                <div class="project-desc collapsed">
+                    <p>
+                        Conducted comprehensive penetration testing exercises on OWASP Juice Shop, identifying and
+                        exploiting critical vulnerabilities including SQL Injection, Cross-Site Scripting (XSS), and
+                        authentication bypass flaws. Demonstrated detailed vulnerability analysis and remediation
+                        strategies.
+                    </p>
+                </div>
                 <div class="project-tags">
                     <span class="tag">OWASP</span>
                     <span class="tag">Burp Suite</span>
                     <span class="tag">Testing</span>
                 </div>
+                <div class="project-meta">
+                    <div class="meta-group">
+                        <span class="meta-label">Tools:</span>
+                        <span class="meta-badge">Burp Suite</span>
+                        <span class="meta-badge">Zap</span>
+                        <span class="meta-badge">SQLMap</span>
+                    </div>
+                    <div class="meta-group">
+                        <span class="meta-label">Focus:</span>
+                        <span class="meta-badge">App Security</span>
+                        <span class="meta-badge">Vulnerability Analysis</span>
+                    </div>
+                </div>
+                <button class="read-more">Details</button>
             </div>
 
             <div class="project-card" style="--delay: 0.3s">
@@ -142,16 +178,32 @@
                     <i class="fas fa-wifi"></i>
                 </div>
                 <h3>IoT & Network Security</h3>
-                <p>
-                    Designed and implemented a secure IoT Smart University network infrastructure using Cisco Packet
-                    Tracer. Developed a WiFi IoT Gateway utilizing ESP32 microcontroller with encrypted communication
-                    protocols and network security best practices.
-                </p>
+                <div class="project-desc collapsed">
+                    <p>
+                        Designed and implemented a secure IoT Smart University network infrastructure using Cisco Packet
+                        Tracer. Developed a WiFi IoT Gateway utilizing ESP32 microcontroller with encrypted
+                        communication
+                        protocols and network security best practices.
+                    </p>
+                </div>
                 <div class="project-tags">
                     <span class="tag">IoT</span>
                     <span class="tag">ESP32</span>
                     <span class="tag">Networking</span>
                 </div>
+                <div class="project-meta">
+                    <div class="meta-group">
+                        <span class="meta-label">Tools:</span>
+                        <span class="meta-badge">Cisco Packet Tracer</span>
+                        <span class="meta-badge">ESP-IDF</span>
+                    </div>
+                    <div class="meta-group">
+                        <span class="meta-label">Focus:</span>
+                        <span class="meta-badge">IoT Security</span>
+                        <span class="meta-badge">Secure Communications</span>
+                    </div>
+                </div>
+                <button class="read-more">Details</button>
             </div>
         </div>
     </section>
@@ -165,6 +217,10 @@
                 <div class="progress-bar">
                     <div class="progress" style="width: 85%"></div>
                 </div>
+                <div class="lab-meta">
+                    <span class="status-badge in-progress">In Progress</span>
+                    <span class="lab-progress-text">85% complete</span>
+                </div>
             </div>
             <div class="lab-card">
                 <h3>TryHackMe</h3>
@@ -172,12 +228,20 @@
                 <div class="progress-bar">
                     <div class="progress" style="width: 60%"></div>
                 </div>
+                <div class="lab-meta">
+                    <span class="status-badge in-progress">In Progress</span>
+                    <span class="lab-progress-text">60% complete</span>
+                </div>
             </div>
             <div class="lab-card">
                 <h3>Hack The Box</h3>
                 <p>Planned</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 20%"></div>
+                </div>
+                <div class="lab-meta">
+                    <span class="status-badge planned">Planned</span>
+                    <span class="lab-progress-text">20% groundwork</span>
                 </div>
             </div>
         </div>
@@ -207,6 +271,9 @@
     <footer>
         <p>&copy; 2026 Omar Ahmed | Cybersecurity Professional</p>
         <p class="footer-accent">Dedicated to securing critical infrastructure and protecting digital assets</p>
+        <div class="footer-cta">
+            <a href="#contact" class="btn btn-primary footer-btn">Contact Me</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>

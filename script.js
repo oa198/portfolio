@@ -104,6 +104,36 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Read More / Details toggle for project descriptions
+    const readButtons = document.querySelectorAll('.read-more');
+    readButtons.forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', function (e) {
+            const card = this.closest('.project-card');
+            if (!card) return;
+            const desc = card.querySelector('.project-desc');
+            if (!desc) return;
+
+            const expanded = desc.classList.contains('expanded');
+            if (expanded) {
+                desc.classList.remove('expanded');
+                desc.classList.add('collapsed');
+                this.textContent = 'Details';
+                this.setAttribute('aria-expanded', 'false');
+            } else {
+                desc.classList.remove('collapsed');
+                desc.classList.add('expanded');
+                this.textContent = 'Close';
+                this.setAttribute('aria-expanded', 'true');
+                // ensure the expanded content is visible
+                setTimeout(() => {
+                    const top = card.getBoundingClientRect().top + window.pageYOffset - 90;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }, 80);
+            }
+        });
+    });
+
     // Skill tag stagger animation
     const skillTags = document.querySelectorAll('.skill-tag');
     const skillsSection = document.querySelector('#skills');
