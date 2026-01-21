@@ -527,6 +527,130 @@ h2::after {
     color: #ffffff;
 }
 
+/* Featured badge and subtle highlight */
+.project-card.featured {
+    border-color: rgba(37, 99, 235, 0.15);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.06);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(30, 64, 175, 0.08);
+}
+
+/* Project metadata badges and read-more */
+.project-meta {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-direction: column;
+}
+
+.meta-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.meta-label {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+}
+
+.meta-badge {
+    background: var(--darker);
+    color: var(--primary);
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    border: 1px solid #e6eefb;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.meta-badge:hover {
+    transform: translateY(-3px);
+}
+
+.project-desc.collapsed {
+    max-height: 4.6rem;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.project-desc.expanded {
+    max-height: 400px;
+}
+
+.read-more {
+    margin-top: 0.8rem;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.read-more:hover {
+    background: rgba(59, 130, 246, 0.06);
+    transform: translateY(-2px);
+}
+
+/* Labs status badges and progress text */
+.lab-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.9rem;
+    gap: 1rem;
+}
+
+.status-badge {
+    padding: 6px 9px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.status-badge.in-progress {
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+    color: white;
+}
+
+.status-badge.planned {
+    background: linear-gradient(90deg, #94a3b8, #cbd5e1);
+    color: #0f172a;
+}
+
+.lab-progress-text {
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Footer CTA */
+.footer-cta {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 20px 0;
+}
+
+.footer-btn {
+    max-width: 220px;
+}
+
 /* ========== LABS SECTION ========== */
 #labs {
     background: #ffffff;
